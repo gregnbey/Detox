@@ -181,8 +181,11 @@ class InstrumentsEventsActionsHandler(
                 else -> throw DetoxInstrumentsException("Invalid action")
             }
         }
-
         wsClient.sendAction("eventDone", emptyMap<String, Any>(), messageId)
     }
+}
 
+class ScarceActionHandler: DetoxActionHandler {
+    override fun handle(params: String, messageId: Long) {
+    }
 }
